@@ -1,0 +1,27 @@
+---
+import ReactApp from "../components/reactApp/ReactApp";
+import ReactCSR from "../components/reactApp/ReactCSR";
+import { getPosts } from "../services/postService";
+const fetchBlogPosts = async () => {
+    const messages = await getPosts(5);
+    return messages;
+  };
+  const blogPostData=await fetchBlogPosts();
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="/styles.css">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+        
+		<ReactApp blogData={blogPostData} />
+        <ReactCSR client:visible/>
+    
+	</body>
+</html>
