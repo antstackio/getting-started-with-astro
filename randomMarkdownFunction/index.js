@@ -2,10 +2,7 @@ var { faker } = require("@faker-js/faker");
 
 function generateMD() {
   var fileName = faker.lorem.word() + "-" + faker.lorem.word();
-  var fileContents = `---
-  title: "${faker.lorem.words()}"
-  layout: Page
-  ---
+  var fileContents = `
   ${faker.lorem.paragraphs()}
   `;
   return {
