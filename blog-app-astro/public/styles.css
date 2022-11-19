@@ -30,6 +30,7 @@ body {
   flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
+  padding: 1em;
 }
 
 h1 {
