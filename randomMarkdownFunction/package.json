@@ -1,0 +1,16 @@
+{
+  "name": "randomMarkdownFunction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "aws-sdk": "^2.1258.0"
+  }
+}
