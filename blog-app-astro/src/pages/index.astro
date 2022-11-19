@@ -1,5 +1,11 @@
 ---
 import ReactApp from "../components/reactApp/ReactApp";
+import { getPosts } from "../services/postService";
+const fetchBlogPosts = async () => {
+    const messages = await getPosts(5);
+    return messages;
+  };
+  const blogPostData=await fetchBlogPosts();
 ---
 
 <html lang="en">
@@ -12,6 +18,6 @@ import ReactApp from "../components/reactApp/ReactApp";
 		<title>Astro</title>
 	</head>
 	<body>
-		<ReactApp client:load/>
+		<ReactApp blogData={blogPostData} />
 	</body>
 </html>

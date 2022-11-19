@@ -1,20 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import MarkdownCard from "../../components/MarkdownCard";
-import { getPosts, IPost } from "../../services/postService";
+import type { IPost } from "../../services/postService";
 
-const App = () => {
-  const [blogs, setBlogs] = useState<IPost[]>([]);
-  const fetchBlogPosts = async () => {
-    const messages = await getPosts(5);
-    setBlogs(messages);
-  };
-  useEffect(() => {
-    console.log("Hello");
-
-    console.log("Hello");
-
-    fetchBlogPosts();
-  }, []);
+const App = ({ blogData }: { blogData: IPost[] }) => {
+  const [blogs, _] = useState<IPost[]>(blogData);
 
   return (
     <main>

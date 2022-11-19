@@ -8,8 +8,6 @@ export interface IGetPostsResponse {
   posts: IPost[];
 }
 export const getPosts = async (count: string | number) => {
-  console.log("Hi");
-
   const response = await fetch(`${BASE_URL}/?count=${count}`);
   return response.json();
 };
