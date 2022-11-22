@@ -8,3 +8,4 @@ directories
 
 `blog-app-react` : React App [Live](https://antstack-blog-react.netlify.app/)
 
+`randomMarkdownFunction` : simple js function to generate fake blogs. (uses fakerjs)
